@@ -1,58 +1,45 @@
 ======================
-cookiecutter-pylibrary
+cookiecutter-pypaper
 ======================
 
-Cookiecutter_ template for a Python library. |travis| |appveyor| |requiresio|
+Cookiecutter_ template for a Python project associated with a scientific paper. |travis| |appveyor| |requiresio|
 
-.. |travis| image:: https://img.shields.io/travis/com/ionelmc/cookiecutter-pylibrary?label=Travis
+.. |travis| image:: https://img.shields.io/travis/com/GalBenZvi/cookiecutter-pypaper?label=Travis
     :alt: Travis-CI Build Status
-    :target: https://travis-ci.com/github/ionelmc/cookiecutter-pylibrary
+    :target: https://travis-ci.com/github/GalBenZvi/cookiecutter-pypaper
 
-.. |appveyor| image:: https://img.shields.io/appveyor/build/ionelmc/cookiecutter-pylibrary/master?label=AppVeyor
+.. |appveyor| image:: https://img.shields.io/appveyor/build/GalBenZvi/cookiecutter-pypaper/master?label=AppVeyor
     :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/ionelmc/cookiecutter-pylibrary
+    :target: https://ci.appveyor.com/project/GalBenZvi/cookiecutter-pypaper
 
-.. |requiresio| image:: https://requires.io/github/ionelmc/cookiecutter-pylibrary/requirements.svg?branch=master
-     :target: https://requires.io/github/ionelmc/cookiecutter-pylibrary/requirements/?branch=master
+.. |requiresio| image:: https://requires.io/github/GalBenZvi/cookiecutter-pypaper/requirements.svg?branch=master
+     :target: https://requires.io/github/GalBenZvi/cookiecutter-pypaper/requirements/?branch=master
      :alt: Requirements Status
 
 *Notes*:
 
-* This is largely designed to address this `blog post about packaging python
-  libraries <https://blog.ionelmc.ro/2014/05/25/python-packaging/>`_.
-
-  * ... and it will save you from `packaging pitfalls
-    <https://blog.ionelmc.ro/2014/06/25/python-packaging-pitfalls/>`_.
+* This is largely designed to address this `handbook about reproducible research <https://goodresearch.dev//>`_.
+* The original `cookiecutter-pylibrary <https://github.com/ionelmc/cookiecutter-pylibrary>`_ template is publicly available.
 * There's a bare library using this template (if you're curious about the final
-  result): https://github.com/ionelmc/python-nameless.
-* If you have a web application (not a library) you might want to take a look at
-  `django-docker <https://github.com/evozon/django-docker>`_.
+  result): https://github.com/GalBenZvi/papers-template.
 
 .. contents:: Table of Contents
 
 Features
 --------
 
-This is an "all inclusive" sort of template.
+This template is a derivatives of `cookiecutter-pylibrary <https://github.com/ionelmc/cookiecutter-pylibrary>`_, 
+and therefore includes multiple pythonic features described in the original repository.
 
-* Choice of various licenses.
-* Tox_ for managing test environments for Python 2.7, 3.6+, PyPy etc.
-* Pytest_ or Nose_ for testing Python 2.7, 3.6+, PyPy etc.
-* *Optional* support for creating a tests matrix out of dependencies and python versions.
-* Travis-CI_ and AppVeyor_ for continuous testing.
-* Coveralls_ or Codecov_ for coverage tracking (using Tox_).
-* Documentation with Sphinx_, ready for ReadTheDocs_.
-* Configurations for:
+Additionally, this template includes some `scientific-paper-oriented features <https://goodresearch.dev/setup.html#folders>`_:
 
-  * isort_
-  * bumpversion_ (bump2version_ required)
+* **data** Where you put raw data for your project. You usually won't sync this to source control, unless you use very small, text-based datasets (< 10 MBs).
+* **docs**: Where you put documentation, including Markdown and reStructuredText (reST). Calling it docs makes it easy to publish documentation online through Github pages.
+* **results**: Where you put results, including checkpoints, hdf5 files, pickle files, as well as figures and tables. If these files are heavy, you won’t put these under source control.
+* **scripts**: Where you put scripts - Python and bash alike - as well as .ipynb notebooks.
+* **src**: Where you put reusable Python modules for your project. This is the kind of python code that you import.
 
-* Support for C extensions (including coverage measurement for the C code). See c_extension_support_.
-* Packaging and code quality checks. This template comes with a tox environment (``check``) that will:
-
-  * Check if your ``README.rst`` is valid.
-  * Check if the ``MANIFEST.in`` has any issues.
-  * Run ``flake8`` (a combo of PEP8, pyflakes and McCabe checks) or ``pylama``
+tests: Where you put tests for your code. We’ll cover testing in a later lesson.
 
 Requirements
 ------------
@@ -79,7 +66,7 @@ This template is more involved than the regular `cookiecutter-pypackage
 
 First generate your project::
 
-  cookiecutter gh:ionelmc/cookiecutter-pylibrary
+  cookiecutter gh:GalBenZvi/cookiecutter-pypaper
 
 You will be asked for these fields:
 
@@ -97,7 +84,7 @@ You will be asked for these fields:
     * - ``full_name``
       - .. code:: python
 
-            "Ionel Cristian Maries"
+            "Gal Ben-Zvi"
       - Main author of this library or application (used in ``AUTHORS.rst`` and ``setup.py``).
 
         Can be set in your ``~/.cookiecutterrc`` config file.
@@ -105,7 +92,7 @@ You will be asked for these fields:
     * - ``email``
       - .. code:: python
 
-            "contact@ionelmc.ro"
+            "benzvigal@gmail.com"
       - Contact email of the author (used in ``AUTHORS.rst`` and ``setup.py``).
 
         Can be set in your ``~/.cookiecutterrc`` config file.
@@ -113,7 +100,7 @@ You will be asked for these fields:
     * - ``website``
       - .. code:: python
 
-            "https://blog.ionelmc.ro"
+            "https://github.com/GalBenZvi"
       - Website of the author (used in ``AUTHORS.rst``).
 
         Can be set in your ``~/.cookiecutterrc`` config file.
@@ -121,7 +108,7 @@ You will be asked for these fields:
     * - ``repo_username``
       - .. code:: python
 
-            "ionelmc"
+            "GalBenZvi"
       - GitHub user name of this project (used for GitHub link).
 
         Can be set in your ``~/.cookiecutterrc`` config file.
@@ -413,8 +400,8 @@ project)::
 
   git init .
   git add .
-  git commit -m "Initial skel."
-  git remote add origin git@github.com:ionelmc/python-nameless.git
+  git commit -m "Initial skeleton."
+  git remote add origin git@github.com:GalBenZvi/papers-template.git
   git push -u origin master
 
 Then:
@@ -504,7 +491,7 @@ Note:
 Changelog
 ---------
 
-See `CHANGELOG.rst <https://github.com/ionelmc/cookiecutter-pylibrary/blob/master/CHANGELOG.rst>`_.
+See `CHANGELOG.rst <https://github.com/GalBenZvi/cookiecutter-pypaper/blob/master/CHANGELOG.rst>`_.
 
 Questions & answers
 -------------------

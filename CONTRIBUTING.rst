@@ -8,7 +8,7 @@ little bit helps, and credit will always be given.
 Bug reports
 ===========
 
-When `reporting a bug <https://github.com/ionelmc/cookiecutter-pylibrary/issues>`_ please include:
+When `reporting a bug <https://github.com/GalBenZvi/cookiecutter-pypaper/issues>`_ please include:
 
     * Your operating system name and version.
     * Any details about your local setup that might be helpful in troubleshooting.
@@ -24,7 +24,7 @@ articles, and such.
 Feature requests and feedback
 =============================
 
-The best way to send feedback is to file an issue at https://github.com/ionelmc/cookiecutter-pylibrary/issues.
+The best way to send feedback is to file an issue at https://github.com/GalBenZvi/cookiecutter-pypaper/issues.
 
 If you are proposing a feature:
 
@@ -35,9 +35,9 @@ If you are proposing a feature:
 Development
 ===========
 
-To set up `cookiecutter-pylibrary` for local development:
+To set up `cookiecutter-pypaper` for local development:
 
-1. `Fork cookiecutter-pylibrary on GitHub <https://github.com/ionelmc/cookiecutter-pylibrary/fork>`_.
+1. `Fork cookiecutter-pylibrary on GitHub <https://github.com/GalBenZvi/cookiecutter-pypaper/fork>`_.
 2. Clone your fork locally::
 
     git clone git@github.com:your_name_here/cookiecutter-pylibrary.git
@@ -72,7 +72,7 @@ For merging, you should:
 3. Add a note to ``CHANGELOG.rst`` about the changes.
 
 .. [1] If you don't have all the necessary python versions available locally you can rely on Travis - it will
-       `run the tests <https://travis-ci.com/github/ionelmc/cookiecutter-pylibrary/pull_requests>`_ for each change you add in the pull request.
+       `run the tests <https://travis-ci.com/github/GalBenZvi/cookiecutter-pypaper/pull_requests>`_ for each change you add in the pull request.
 
        It will be slower though ...
 
@@ -81,12 +81,12 @@ Tips
 
 If you want to add a context option, you need to:
 
-* Add the actual option in `cookiecutter.json <https://github.com/ionelmc/cookiecutter-pylibrary/blob/master/cookiecutter.json>`_
+* Add the actual option in `cookiecutter.json <https://github.com/GalBenZvi/cookiecutter-pypaper/blob/master/cookiecutter.json>`_
 * Add it in the cookiecutter test builder suite:
 
-  * Edit `setup.cfg <https://github.com/ionelmc/cookiecutter-pylibrary/blob/master/ci/setup.cfg>`_
+  * Edit `setup.cfg <https://github.com/GalBenZvi/cookiecutter-pypaper/blob/master/ci/setup.cfg>`_
   * Run ``./ci/bootstrap.py`` to regenerate the test ``.cookiecutterrc`` files.
-* Change the `bare tox.ini <https://github.com/ionelmc/cookiecutter-pylibrary/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/tox.ini>`_ to have an conditional for it.
-* Change the `template tox.ini <https://github.com/ionelmc/cookiecutter-pylibrary/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/ci/templates/tox.ini>`_
+* Change the `bare tox.ini <https://github.com/GalBenZvi/cookiecutter-pypaper/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/tox.ini>`_ to have an conditional for it.
+* Change the `template tox.ini <https://github.com/GalBenZvi/cookiecutter-pypaper/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/ci/templates/tox.ini>`_
   (don't forget the raw sections) to have an conditional for it  (this ``tox.ini`` file is used with the ``test_matrix_configurator=yes`` option)
 
