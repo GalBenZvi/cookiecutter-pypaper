@@ -2,7 +2,9 @@
 cookiecutter-pypaper
 ======================
 
-Cookiecutter_ template for a Python project associated with a scientific paper. |travis| |appveyor| |requiresio|
+Cookiecutter_ template for a Python project associated with a scientific paper.
+
+|travis| |appveyor| |requiresio|
 
 .. |travis| image:: https://img.shields.io/travis/com/GalBenZvi/cookiecutter-pypaper?label=Travis
     :alt: Travis-CI Build Status
