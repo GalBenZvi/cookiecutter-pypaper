@@ -63,3 +63,6 @@ output/
 boilerplate/
 *.bak
 python-nameless
+
+#Vscode 
+.vscode/
