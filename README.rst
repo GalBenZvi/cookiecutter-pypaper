@@ -30,7 +30,7 @@ Cookiecutter_ template for a Python project associated with a scientific paper.
 Features
 --------
 
-This template is a derivatives of `cookiecutter-pylibrary <https://github.com/ionelmc/cookiecutter-pylibrary>`_, 
+This template is a derivative of `cookiecutter-pylibrary <https://github.com/ionelmc/cookiecutter-pylibrary>`_, 
 and therefore includes multiple pythonic features described in the original repository.
 
 Additionally, this template includes some `scientific-paper-oriented features <https://goodresearch.dev/setup.html#folders>`_:
